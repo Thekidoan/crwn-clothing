@@ -10,6 +10,7 @@ export const BUTTON_TYPE_CLASSES = {
   inverted: "inverted",
 };
 const getButton = (buttonType = BUTTON_TYPE_CLASSES.base) =>
+
   ({
     [BUTTON_TYPE_CLASSES.base]: BaseButton,
     [BUTTON_TYPE_CLASSES.google]: GoogleSignInButton,
@@ -20,5 +21,4 @@ const Button = ({ children, buttonType, ...otherProps }) => {
   const CustomeButton = getButton(buttonType);
   return <CustomeButton {...otherProps}>{children}</CustomeButton>;
 };
-
 export default Button;
